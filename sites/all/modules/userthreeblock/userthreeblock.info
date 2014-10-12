@@ -1,0 +1,10 @@
+name = userthreeblock
+description = cap letters
+core = 7.x
+package = Features
+version = 7.x-1.0-beta1
+project = userthreeblock
+dependencies[] = fe_block
+features[fe_block_boxes][] = userthree
+features[features_api][] = api:2
+project status url = http://192.168.1.160
