@@ -1,0 +1,118 @@
+.jmPriceTable:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.jmPriceTable {
+    padding: 60px 0 48px;
+    text-align: center;
+    font-family: 'open_sanslight';
+}
+.jmCentered {
+    clear: both;
+    text-align: center;
+}
+.jmPriceTable dl {
+    background: #FFFFFF;
+    display: block;
+}
+.jmPriceTable dl dd{
+    margin: 0;
+    display: block;
+    line-height: 1.6;
+    padding: 10px;
+}
+.jmPriceTable dl dd.odd{
+    background: #e7ebed;
+}
+.jmPriceTable .jmPremium dl dd.odd{
+    background: #e5f9f8;
+} 
+.jmPriceTable.col4 dl {
+    float: left;
+    width: 25%;
+    padding-bottom: 20px;
+    border: 1px solid $color_main;
+    margin-right: -1px;
+}
+
+.jmPriceTable dl.jmPremium {
+    position: relative;
+    z-index: 1;
+    margin-top: -20px;
+    border: 1px solid $color_link;
+}
+.jmPriceTable dl.jmPremium dt small{
+    display: block;
+    clear: both;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 5px;
+}
+.jmPriceTable dd small{
+    font-size: 12px;
+    display: block;
+    clear: both;
+}
+.jmPriceTable dl.jmPremium dt{
+    color: #fff;
+    border-bottom: 1px solid $color_link;
+    background: $color_link;
+    font-family: 'open_sanslight';
+}
+
+.jmPriceTable dt {
+    color: #fff;
+    border-bottom: 1px solid $color_main;
+    background: $color_main;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 65px;
+    display: block;
+    line-height: 1.2;
+    padding: 10px;
+}
+.jmPriceTable dl.jmPremium dt {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.jmPriceTable dd.jmPrice {
+    background: $color_main;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    margin: 25px auto;
+    color: #fff;
+    font-size: 60px;
+    font-family: open_sansbold;
+    padding: 25px 10px;
+    line-height: 1;
+}
+.jmPriceTable .jmPremium dd.jmPrice{
+    background: $color_link;
+}
+.jmPriceTable dd.jmPrice small {
+    font-family: 'open_sanslight';
+}
+.jmPriceTable dd.jmPrice .dollars{
+    font-size: 60%;
+}
+
+@media (max-width: 640px) {
+    .jmPriceTable dt {
+        font-size: 16px;
+    }
+    .jmPriceTable.col4 dl{
+        width: 50%;
+    }
+    .jmPriceTable dd.jmPrice{
+        height: 80px;
+        line-height: 1;
+        margin: 15px auto;
+        padding: 20px 10px;
+        width: 80px;
+        font-size: 20px;
+    }
+}

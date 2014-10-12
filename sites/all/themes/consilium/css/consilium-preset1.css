@@ -1,0 +1,30 @@
+#section-feature {
+  padding: 25px 0px 25px 0px;
+}
+#section-news2 {
+  padding: 60px 0 80px;
+}
+#section-content {
+  padding: 0px 0px 55px 0px;
+}
+body {
+  color: #888;
+}
+.body a:not(.btn) {
+  color: #00c3b6;
+}
+.link-bg:hover, .link-bg a:hover {
+  background-color: #00c3b6;
+}
+.tb-megamenu .nav li.dropdown.active > .dropdown-toggle, .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle, .tb-megamenu .nav > li.dropdown.open.active > a:hover, .tb-megamenu .nav > li > a:focus, .tb-megamenu .nav > li > a:hover, .tb-megamenu .nav li.dropdown.open > .dropdown-toggle, .tb-megamenu .dropdown-menu li > a:hover, .tb-megamenu .dropdown-menu li > a:focus, .tb-megamenu .dropdown-submenu:hover > a, .tb-megamenu .dropdown-menu .active > a, .tb-megamenu .dropdown-menu .active > a:hover {
+  color: #00c3b6;
+}
+.body a:hover {
+  color: #113a52;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #00c3b6;
+}
+.body h2 a {
+  color: #00c3b6;
+}

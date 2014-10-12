@@ -1,0 +1,13 @@
+.region-feature-first{
+    .superhero-portfolio .element{
+            margin-bottom: 0;
+            &.columns-3{
+                    width: 33%;
+                    margin: 0;
+                    padding: 3px;
+            }
+    }
+}
+.portfolio-container{
+    background: #fff;
+}

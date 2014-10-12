@@ -1,0 +1,282 @@
+// Buttons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+// Core
+.btn,.button,button {
+    border: 2px solid $color_main;
+    padding: 4px 14px;
+    
+    display: inline-block;
+    @include ie7-inline-block();
+    padding: 6px 14px 2px;
+    margin-bottom: 0; // For input.btn
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+    *line-height: $baseLineHeight;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    @include border-radius(5px);
+    @include ie7-restore-left-whitespace(); // Give IE7 some love
+    @include box-shadow(none);
+    font-family: 'NovecentowideNormalRegular';
+    // Hover state
+    &:hover {
+        color: $grayDark;
+        text-decoration: none;
+        background-color: darken($white, 10%);
+        *background-color: darken($white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
+        //background-position: 0 -15px;
+        // transition is only when going to hover, otherwise the background
+        // behind the gradient (there for IE<=9 fallback) gets mismatched
+        @include transition(background-position .1s linear);
+    }
+
+    // Focus state for keyboard and accessibility
+    &:focus {
+        @include tab-focus();
+        outline: 0;
+        @include box-shadow("none");
+    }
+
+    // Active state
+    &.active,
+    &:active {
+        background-color: darken($white, 10%);
+        background-color: darken($white, 15%) e("\9");
+        background-image: none;
+        outline: 0;
+        @include box-shadow("none");
+    }
+
+    // Disabled state
+    &.disabled,
+    &[disabled] {
+        cursor: default;
+        background-color: darken($white, 10%);
+        background-image: none;
+        @include opacity(65);
+        @include box-shadow(none);
+    }
+    
+}
+.jm-btn {
+    line-height: 30px;
+    margin: 0 10px;
+}
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn-lg {
+    padding: 9px 14px!important;
+    font-size: $baseFontSize + 2px;
+    line-height: normal;
+    @include border-radius(5px);
+}
+.btn-lg [class^="fa fa-"] {
+    margin-top: 2px;
+}
+
+// Small
+.btn-xs {
+    padding: 3px 15px;
+    font-size: $baseFontSize - 2px;
+    line-height: $baseLineHeight - 2px;
+}
+.btn-xs [class^="fa fa-"] {
+    margin-top: 0;
+}
+
+// Mini
+.btn-mini {
+    padding: 3px 9px;
+    font-size: $baseFontSize - 3px;
+    line-height: $baseLineHeight - 4px;
+}
+
+// Block button
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    @include box-sizing(border-box);
+}
+.btn-block + .btn-block {
+    margin-top: 5px;
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+    color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
+// -------------------------
+
+// Warning appears are orange
+.btn-warning {
+    color: $white;
+    background: $btnWarningBackground;
+    border: none;
+    border-bottom: 4px solid darken($btnWarningBackground, 5%)!important;
+    &:hover,&:focus,&:active{
+        color: $white;
+        background: darken($btnWarningBackground, 5%)!important;
+    }
+}
+// Danger and error appear as red
+.btn-danger {
+    color: $white;
+    background: $btnDangerBackground;
+    border: none;
+    border-bottom: 4px solid darken($btnDangerBackground, 5%)!important;
+    &:hover,&:focus,&:active{
+        color: $white;
+        background: darken($btnDangerBackground, 5%)!important;
+    }
+}
+// Success appears as green
+.btn-success {
+    color: $white;
+    background: $btnSuccessBackground;
+    border: none;
+    border-bottom: 4px solid darken($btnSuccessBackground, 5%)!important;
+    &:hover,&:focus,&:active{
+        color: $white;
+        background: darken($btnSuccessBackground, 5%)!important;
+    }
+}
+// Info appears as a neutral blue
+.btn-info {
+    color: $white;
+    background: $btnInfoBackground;
+    border: none;
+    border-bottom: 4px solid darken($btnInfoBackground, 5%)!important;
+    &:hover,&:focus,&:active{
+        color: $white;
+        background: darken($btnInfoBackground, 5%)!important;
+    }
+}
+// Inverse appears as dark gray
+.btn-inverse {
+    color: $white;
+    background: $btnInverseBackground;
+    border: none;
+    border-bottom: 4px solid darken($btnInverseBackground, 5%)!important;
+    &:hover,&:focus,&:active{
+        color: $white;
+        background: darken($btnInverseBackground, 5%)!important;
+    }
+}
+
+// Cross-browser Jank
+// --------------------------------------------------
+
+button.btn,
+input[type="submit"].btn {
+
+    // Firefox 3.6 only I believe
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
+    // IE7 has some default padding on button controls
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+
+    &.btn-lg {
+        *padding-top: 7px;
+        *padding-bottom: 7px;
+    }
+    &.btn-xs {
+        *padding-top: 3px;
+        *padding-bottom: 3px;
+    }
+    &.btn-mini {
+        *padding-top: 1px;
+        *padding-bottom: 1px;
+    }
+}
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+    background: $color_link;
+    color: $white;
+    text-shadow: none;
+    border: none;
+    border-bottom: 4px solid darken($color_link, 5%);
+    &:hover,
+        &:focus,
+        &:active{
+        background: darken($color_link, 5%)!important;
+        border: none;
+        border-bottom: 4px solid darken($color_link, 5%);
+        color: $white!important;
+    }
+}
+
+.btn-default{
+    background: $color_main;
+    color: $white!important;
+    text-shadow: none;
+    border: none;
+    border-bottom: 4px solid darken($color_main, 5%)!important;
+    &:hover,
+        &:focus,
+        &:active{
+        background: darken($color_main, 5%)!important;
+        border: none;
+        border-bottom: 4px solid darken($color_main, 5%);
+        color: $white!important;
+    }
+}
+.btn-primary,.button,button{
+    background: none;
+    padding: 4px 14px 2px;
+    color: $color_main;
+    text-shadow: none;
+    &:hover,
+        &:focus,
+        &:active{
+        background: fade_out($color_main,0.8)!important;
+        color: $color_main;
+    }
+    &.btn-link {
+        border: 2px solid $color_link;
+        color: $color_link;
+        background: none;
+        &:hover{
+            background: fade_out($color_link,0.7)!important;
+            color: $color_link!important;
+        }
+    }
+}
+
+.btn-trans{
+    background: none!important;
+    border: 2px solid #fff !important;
+    padding: 4px 14px;
+}
+.btn-white{
+    border-color: #fff;
+    background: #fff;
+    &:hover{
+        background: $color_main!important;
+    }
+}

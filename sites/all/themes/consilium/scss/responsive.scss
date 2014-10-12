@@ -1,0 +1,207 @@
+/*----------------------------------------------------------------------
+# Package - JM Template
+# ----------------------------------------------------------------------
+# Author - JoomlaMan http://www.joomlaman.com
+# Copyright Copyright under commercial licence (C) 2012 - 2013 JoomlaMan
+# License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+-----------------------------------------------------------------------*/
+
+@media (max-width:1200px) {
+    .container{
+        width: auto!important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    // feature
+    #section-feature {
+        h2{
+            font-size: 24px ;
+        }
+        a{
+            &.btn{
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+@media (max-width:992px) {
+    .container{
+        width: auto;
+    }
+    // =========== header ============
+    #section-header {
+        .superhero-dropdown > ul > li > a, .site-logo a{
+            line-height: 60px;
+        }
+        .site-logo a img{
+            height: 33px!important;
+        }
+        a.superhero-mobile-menu-toggle{
+            top: -46px;
+        }
+    }
+    
+    // =========== end header ============
+    
+    // feature
+    #section-feature {
+        h2{
+            font-size: 20px ;
+        }
+        a{
+            &.btn{
+                padding: 9px 6px;
+                font-size: 12px;
+            }
+        }
+    }
+    // News1
+    #section-news1{
+        .block{
+            padding-top: 20px;
+            .block-title{
+                padding-top: 0;
+            }
+        }
+    }
+    // News2
+    #section-news2{
+        padding: 20px 0;
+        .block{
+            .block-title{
+                padding-top: 0;
+            }
+            img{
+                text-align: center;
+            }
+        }
+    }
+    
+    #section-bottom{
+        .region {
+            margin-bottom: 20px;
+        }
+    }
+    
+    #section-footer{
+        text-align: center;
+        ul{
+            float: none!important;
+        }
+    }
+    .carousel-slide-white{
+        padding-bottom: 130px!important;
+        padding-top: 130px!important;
+        .carousel h2{
+            font-size: 18px;
+        }
+    }
+}
+@media (max-width:784px){
+    // feature
+    #section-feature {
+        h2{
+            font-size: 18px ;
+        }
+        a{
+            &.btn{
+                padding: 9px 3px;
+                font-size: 13px;
+            }
+        }
+    }
+
+}
+@media (max-width:767px){
+    // feature
+    #section-feature {
+        text-align: center;
+        a{
+            &.btn{
+                font-size: 13px;
+                margin-top: 10px;
+                padding: 10px;
+            }
+        }
+    }
+    // Bottom sections
+    #section-bottom{
+        padding:$mainPadding 0 0 0;
+        [class*="region"],
+        [class^="region"]{
+            margin: 0 0 $mainMargin 0;
+            padding: 0;
+            > .block{
+                padding: 0 10px;
+            }
+        }
+    }
+    // Footer sections
+    #section-footer{
+        padding: 10px 0;
+    }
+    
+    .carousel-slide-white{
+        padding-bottom: 60px!important;
+        padding-top: 60px!important;
+        .carousel h2{
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width:640px){
+    // Bottom sections
+    #section-bottom{
+        [class*="region"],
+        [class^="region"]{
+            margin: 0;
+            padding: 0;
+            + [class*="region"],
+            + [class^="region"]{
+                margin-top: 20px;
+            }
+        }
+        form{
+            margin: 0 0 20px;
+        }
+    }
+    // Footer sections
+    #section-footer{
+        text-align: center;
+        padding: 10px 20px;
+        ul.menu{
+            float: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+    .view-superhero-portfolio #filters li{
+        margin-bottom: 15px;
+    }
+    .home-portfolio .webform-client-form input{
+        font-size: 14px;
+    }
+}
+@media (max-width:589px){
+    // feature
+    #section-feature {
+        h2{
+            font-size: 16px ;
+        }
+    }
+}
+@media (max-width:526px){
+    // feature
+    #section-feature {
+        h2{
+            font-size: 14px ;
+        }
+    }
+}
+@media (max-width:480px){
+    .carousel-slide-white{
+        padding-bottom: 30px!important;
+        padding-top: 30px!important;
+    }
+}

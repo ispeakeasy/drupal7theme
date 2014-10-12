@@ -1,0 +1,68 @@
+/*----------------------------------------------------------------------
+# Package - JM Template
+# ----------------------------------------------------------------------
+# Author - JoomlaMan http://www.joomlaman.com
+# Copyright Copyright under commercial licence (C) 2012 - 2013 JoomlaMan
+# License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+-----------------------------------------------------------------------*/
+.rtl{
+    *{direction: rtl;}
+    [class^="col-lg-"],
+    [class^="col-md-"],
+    [class^="col-sm-"],
+    [class^="col-xs-"],
+    [class*="col-lg-"],
+    [class*="col-md-"],
+    [class*="col-sm-"],
+    [class*="col-xs-"]{
+        float: right;
+    }
+    // for Alert
+    .close {
+        float: left;
+    }
+    .superhero-dropdown > ul {
+        float: left;
+    }
+    ul.menu{
+        text-align: right;
+    }
+    
+    .social-icon{
+        ul{
+            li{
+                float: right;
+                margin-left: 20px;
+                margin-right: 0;
+            }
+        }
+    }
+    .bx-viewport{
+        direction: ltr;
+    }
+    #section-footer ul.menu {
+        float: left;
+    }
+    #section-bottom .region-bottom-fourth ul li {
+        float: right;
+        margin-left: 10px;
+        margin-right: 0;
+    }
+    #section-bottom .region-bottom-fourth #block-newsletter-newsletter-subscribe #subscribe:before,
+    #section-bottom .region-bottom-fourth #block-newsletter-newsletter-subscribe #subscribe button{
+        left: 1px;
+        right: auto;
+    }
+    .nav{
+        &.nav-tabs{
+            li:first-child {
+                padding-right: 0;
+                padding-left: 20px;
+            }
+            li + li {
+                border-right: 1px solid #DEDEDE;
+                border-left: none;
+            }
+        }
+    }
+}

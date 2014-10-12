@@ -1,0 +1,471 @@
+/*----------------------------------------------------------------------
+# Package - JM Template
+# ----------------------------------------------------------------------
+# Author - JoomlaMan http://www.joomlaman.com
+# Copyright Copyright under commercial licence (C) 2012 - 2013 JoomlaMan
+# License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+-----------------------------------------------------------------------*/
+ 
+/* Dropcap */
+.sh-dropcap{
+    overflow:hidden;
+    &:first-letter{
+        color:#666;
+        display:block;
+        float:left;
+        font-size:50px;
+        line-height:40px;
+        padding:4px 8px 0 0;
+    }
+}
+
+
+/*Unordered Lists*/
+ul {
+    &.arrow,
+    &.arrow-double,
+    &.tick,
+    &.cross,
+    &.star,
+    &.rss{
+        list-style:none;
+        padding:0;
+        margin:0;
+        li::before,
+        li::after {
+            font-family:FontAwesome;
+            font-size:11px;
+        }
+    }
+}
+
+.ltr {
+    ul {
+        &.arrow,
+        &.arrow-double,
+        &.tick,
+        &.cross,
+        &.star,
+        &.rss{
+            li::before {
+                margin-right:5px;
+            }
+        }   
+
+        &.arrow{
+            li::before {
+                content:"\f105";
+            }
+        }
+
+        &.arrow-double{
+            li::before {
+                content:"\f101";
+            }
+        }
+
+        &.tick{
+            li::before {
+                content:"\f00c";
+            }
+        }
+
+        &.cross{
+            li::before {
+                content:"\f00d";
+            }
+        }
+
+        &.star{
+            li::before {
+                content:"\f006";
+            }
+        }
+        &.rss{
+            li::before {
+                content:"\f09e";
+            }
+        }
+    }   
+}
+
+.rtl {
+    ul {
+        &.arrow,
+        &.arrow-double,
+        &.tick,
+        &.cross,
+        &.star,
+        &.rss{
+            li::after {
+                margin-left:5px;
+            }
+        }
+
+        &.arrow{
+            li::after {
+                content:"\f104";
+            }
+        }
+
+        &.arrow-double{
+            li::after {
+                content:"\f100";
+            }
+        }
+
+        &.tick{
+            li::after {
+                content:"\f00c";
+            }
+        }
+
+        &.cross{
+            li::after {
+                content:"\f00d";
+            }
+        }
+
+        &.star{
+            li::after {
+                content:"\f006";
+            }
+        }
+        &.rss{
+            li::after {
+                content:"\f09e";
+            }
+        }
+    }
+}
+
+img.pull-left,
+.pull-left > img{
+    margin-right: 15px;
+}
+
+img.pull-right,
+.pull-right > img{
+    margin-left: 15px;  
+}
+
+.rtl {
+    img.pull-left,
+    .pull-left > img{
+        margin-left: 15px;
+    }
+    img.pull-right,
+    .pull-right > img{
+        margin-right: 15px; 
+    }
+}
+
+/* Block number */
+.sh-blocknumber { 
+    position: relative;
+    min-height: 45px;
+
+    span{
+        font-weight:bold;  
+        width:48px;
+        height:48px;
+        line-height:48px;
+        display:block;
+        text-align:center;
+        position: absolute;
+        top: 0;
+        &.rounded{
+                @include border-radius(5px);
+        }
+        &.circle{
+                @include border-radius(100%);
+        }
+    }
+    
+} 
+
+.ltr{
+    .sh-blocknumber { 
+        padding:5px 0 5px 60px;
+        span{
+            left: 0;
+        } 
+    }
+}
+
+.rtl{
+    .sh-blocknumber { 
+        padding:5px 60px 5px 0;
+        span{
+            right: 0;
+        } 
+    }
+}
+
+/* Block */
+.sh-block{
+    &.rounded{
+        @include border-radius(5px);
+    }
+}
+
+//bubble
+.sh-bubble{
+    position:relative;
+    margin-bottom:40px;
+    cite {
+        span{
+            content:' ';
+            position: absolute;
+            top: 0;
+            display: block;
+            width:0;
+            height:0;
+            border-bottom-color:transparent!important;
+        }
+        display: block;
+        height:30px;
+        line-height: 36px;
+        position: absolute;
+        bottom: -30px;
+    }
+}
+.ltr{
+    .sh-bubble{
+        cite {
+            span{
+                    left: 0;
+                    border-left-color:transparent!important;
+            }
+            left: 15px;
+            padding-left: 40px;
+        }
+    }
+}
+
+.rtl{
+    .sh-bubble{
+        cite {
+            span{
+                    right: 0;
+                    border-right-color:transparent!important;
+            }
+            right: 15px;
+            padding-right: 40px;
+        }
+    }
+}
+
+.ltr [class^="icon-"].pull-left,
+.ltr [class*=" icon-"].pull-left {
+  margin-right: .3em;
+}
+.ltr [class^="icon-"].pull-right,
+.ltr [class*=" icon-"].pull-right {
+  margin-left: .3em;
+}
+
+
+
+.rtl [class^="icon-"].pull-left,
+.rtl [class*=" icon-"].pull-left {
+  margin-left: .3em;
+}
+.rtl [class^="icon-"].pull-right,
+.rtl [class*=" icon-"].pull-right {
+  margin-right: .3em;
+}
+
+/* accordion page 
+===============================*/
+
+.panel-group .panel{
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 0;
+  .panel-heading{
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 0;
+  } 
+  h4.panel-title {
+    font-size: 15px;
+    margin-bottom: 0 !important;
+    position: relative;
+    z-index: 10;
+    a {
+      color: $color_link;
+      display: block;
+      letter-spacing: 0;
+      line-height: 14px !important;
+      text-decoration: none;
+      @include transition(all 0.3s linear 0s);
+      font-family: open_sanslight;
+      &:hover,
+      &:active,
+      &:focus{
+        outline: none;
+      }
+    }
+    }
+    .panel-collapse .panel-body {
+        background-color: #FFFFFF;
+        @include box-shadow(0 1px 2px fade_out($black,80%));
+        padding: 10px 14px;
+        border: thin solid #ddd;
+  }
+}
+/* Testinomial 
+=============================*/
+
+.testimonial{
+    .testimonial-content{
+        background:#f1f1f1;
+        margin-bottom: 0;
+        padding: 15px;
+        position: relative;
+        @include border-radius(8px);
+    }
+    .testimonial-author{
+        
+    }
+    .pull-left{
+        text-align: center;
+    }
+    .media-body{
+        strong{
+            font-size: 15px;
+            font-family: $sansRegular, 'Open Sans';
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }    
+    }
+}
+
+
+/* Tab 
+=============================*/
+
+.nav{
+    &.nav-tabs{
+        margin-bottom:15px;
+        padding: 0;
+        li{
+            padding: 0 20px;
+            float: none;
+        }
+        li:first-child {
+            padding-left: 0;
+        }
+        li + li {
+            border-left: 1px solid #DEDEDE;
+        }
+        border-bottom: none;
+        a{
+            color: $color_main;
+            border: none;
+            border-bottom: 3px solid #EEEEEE;
+            font-weight: normal;
+            line-height: 1;
+            margin: 0 0 10px;
+            padding: 10px 0;
+            text-transform: uppercase;
+            font-family: 'open_sansbold';
+            
+            &:hover{
+                background: none;
+                color: $color_link!important;
+                border-bottom: 3px solid $color_link;
+                outline: none;
+            }
+        }
+        > .active{
+            > a{
+                border: none;
+                border-bottom: 3px solid $color_link;
+                color: $color_main;
+                &:hover,
+                &:focus,
+                &:active{
+                    border: none!important;
+                    border-bottom: 3px solid $color_link;
+                    color: $color_link!important;
+                }
+            }
+        }
+    }
+
+    &.nav-pills{
+        margin-bottom:15px;
+        padding: 0;
+        li{
+            float: none;
+        }
+        a{
+            &:hover{
+                background: $color_link;
+                color: #fff;
+                outline: none;
+            }
+        }
+        .active{
+            > a{
+                background: $color_link;
+                color: #fff;
+                outline: none;
+            }
+        }
+    }
+}
+
+// =========== skill bar  ============
+.sh_title_wrap{
+    margin-bottom: 5px;
+    .sh_skill_title{
+        color: $color_main;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-family: 'open_sansbold';
+    }
+    .sh_skill_percent{
+        font-weight: normal;
+        font-family: 'open_sansbold';
+    }
+}
+
+.sh_skill_progress_wrap{
+    margin-bottom: 10px;
+    .sh_progress_bar{
+        background: #EDEDED;
+        border-radius: 3px;
+        display: block;
+        height: 15px;
+        width: 100%;
+    }
+    .sh_skills_progress_percent{
+        background: $color_link;
+        border-radius: 3px;
+        display: block;
+        height: 15px
+    }
+}
+
+/* Accordion */
+#spaccordion{
+    .panel-heading{
+        background: $color_link;
+        color: $white;
+        border: none;
+        a{
+            color: $white!important;
+        }
+    }
+    .spcollapse{
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        padding: 10px 14px;
+    }
+}

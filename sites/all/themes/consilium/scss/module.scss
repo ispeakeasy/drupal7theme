@@ -1,0 +1,438 @@
+/*----------------------------------------------------------------------
+# Package - JM Template
+# ----------------------------------------------------------------------
+# Author - JoomlaMan http://www.joomlaman.com
+# Copyright Copyright under commercial licence (C) 2012 - 2013 JoomlaMan
+# License http://www.gnu.org/licenses/gpl-3.0.html GNU/GPLv3
+-----------------------------------------------------------------------*/
+.block{
+    margin-top: 20px;
+    &:first-child,&.block-system{
+        margin-top: 0;
+    }
+    h3.block-title{
+        font-size: $h3Size;
+        font-weight: normal;
+        line-height: 1;
+        text-transform: capitalize;
+        margin: 0 0 15px;
+        padding: 0;
+    }
+    &.title-line{
+        h3.block-title{
+            border-bottom: 1px solid #DDDDDD;
+            color: $color_main;
+            font-size: 18px;
+            font-family: open_sansregular;
+            span.title{
+                display: inline-block;
+                line-height: 1;
+                margin-bottom: -1px;
+                border-bottom: 1px solid $color_link;
+                padding: 0 10px 10px 0;
+            }
+        }
+        a.bx-prev,a.bx-next{
+            color: $color_main;
+        }
+    }
+} 
+// =========== portfolio ============
+.view-superhero-portfolio{
+    #filters {
+        margin-bottom: 20px;
+        list-style: none;
+        padding: 0;
+        li {
+            border: 0 none;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'open_sansregular','Open Sans',sans-serif;
+            font-size: 14px;
+            margin-right: 10px;
+            a {
+                -moz-border-bottom-colors: none;
+                -moz-border-left-colors: none;
+                -moz-border-right-colors: none;
+                -moz-border-top-colors: none;
+                background: #F5F5F5;
+                border-color: -moz-use-text-color #ECECEC #ECECEC -moz-use-text-color;
+                border-image: none;
+                border-radius: 4px;
+                border-right: 1px solid #ECECEC;
+                border-style: none solid solid none;
+                border-width: 0 1px 1px 0;
+                color: #888888;
+                display: block;
+                letter-spacing: 0.05em;
+                line-height: 25px;
+                padding: 0 10px;
+                text-decoration: none;
+                text-transform: capitalize;
+                &.active,&:hover{
+                    background: $color_link;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.portfolio-item{
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-caption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    background: fade_out($color_link,25%);
+    .portfolio-readmore{
+        font-size: 50px;
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.home-portfolio{
+    .view-superhero-portfolio ul#filters{
+       margin-bottom: 40px; 
+    }
+    .view-superhero-portfolio ul#filters li a {
+        background: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        color: $color_link;
+        font-size: 17px;
+        padding: 2px 18px;
+        text-transform: uppercase;
+    }
+    .view-superhero-portfolio #filters li a.active, .view-superhero-portfolio #filters li a:hover{
+        background: #FFFFFF;
+        color: $color_link;
+        box-shadow: 0 0 2px 2px $color_link inset;
+    }
+}
+
+
+// =========== end portfolio ============
+
+// =========== JM-new pro testimonial  ============
+.view-testimonial .bx-wrapper{
+    margin: 0 auto 0;
+    padding: 20px 0 0 0;
+    .views-field-body{
+        padding-bottom: 15px;
+        background: url(#{$theme_path}/images/arrow_testinomial.png) no-repeat bottom center;
+        .field-content{
+            background: rgba(238, 238, 238, 0.8);
+            border-radius:10px;
+            padding: 15px;
+            p{
+                margin: 0;
+            }
+        }
+    }
+    .views-field-field-image{
+        img{
+            border-radius: 50%;
+            margin: 20px auto;
+            max-width: 100px;
+            @include transition(all 0.18s linear 0s);
+        }
+    }
+    .views-field-field-client{
+        h3.client-name{
+            font-family: 'open_sanssemibold';
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            text-align: center;
+        }  
+    }
+    .views-field-field-job-title{
+        .job-title{
+            color: $white;
+            font-family: 'open_sanssemibold';
+            font-size: 12px;
+            padding: 5px 0 0;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+}
+// =========== end JM-new pro testimonial  ============
+
+
+.bx-wrapper .bx-prev{
+    background: none;
+    left: 0;
+}
+.bx-wrapper .bx-next{
+    background: none;
+    right: 0;
+}
+.bx-wrapper .bx-controls-direction a{
+    text-indent: 0!important;
+    font-size: 23px;
+    width: auto;
+    height: auto;
+}
+
+// =========== latest-work  ============
+.view-latest-work{
+    .bx-controls{
+        position: absolute;
+        top: -20px;
+        right: 0;
+    }
+    .bx-controls-direction{
+        position: relative;
+        width: 22px;
+    }
+    .bx-wrapper .bx-prev{
+        background: none;
+        left: 0;
+    }
+    .bx-wrapper .bx-next{
+        background: none;
+        right: 0;
+    }
+    .bx-wrapper .bx-controls-direction a{
+        text-indent: 0;
+        font-size: 23px;
+        margin-top: -25px;
+        width: auto;
+        height: auto;
+    }
+}
+.rtl{
+    .view-latest-work{
+        .bx-controls{
+            left: 0;
+            right: auto;
+        }
+    }
+}
+// =========== end latest-work  ============
+
+// =========== JM-new pro theteam  ============
+.view-team{
+    .slide-item-image{
+        text-align: center;
+        padding: 0;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        img{
+            max-width: 160px;
+            display: inline-block;
+            border-radius: 50%;
+            height: 160px;
+        }
+        .circle-border{
+            border: 1px solid #ccc;
+            background: none repeat scroll 0 0 transparent;
+            left: 0px;
+            position: absolute;
+            top: 0px;
+            width: 99%;
+            height: 99%;
+            border-radius: 50%;
+            z-index: -1;
+            @include transition(all 225ms cubic-bezier(0.5, -0.7, 0.67, 0.7));
+        }
+        &:hover .circle-border{
+            border-color: $color_link;
+            @include scale(1.1);
+        }
+    }
+    .slide-item-desc-warp{
+        .field-name-field-job-title{
+            color: $color_main;
+            font-size: 12px;
+            text-transform: capitalize;
+            padding-top: 5px;
+            font-family: 'open_sansregular';
+        }
+        .slide-item-desc{
+            margin-bottom: 0px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .user-social{
+            .field-item{
+                display: inline-block;
+                a{
+                    font-size: 20px;
+                    color: #ddd;
+                    margin-left: 10px;
+                    &:hover{
+                        color: $color_main;
+                        &:before{
+                            color: $color_main;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// =========== end JM-new pro theteam  ============
+
+// ===========  JM-tweets  ============
+.sp-twitter{
+    .sp-tweet{
+        text-align: center;
+        padding: 0 50px;
+    }
+}
+// =========== end JM-tweets  ============
+
+.block{
+    &.carousel-slide-white{
+        .carousel{
+            background: #fff;
+            @include opacity(80);
+            width: 75%;
+            margin: 0 auto;
+            height: 90px;
+            color: #000;
+            h2{color: #000;margin-top: 23px;}
+        }
+    }
+    .vertical .carousel-inner {
+        height: 100%;
+        min-height: 100px;
+    }
+
+    .carousel.vertical .item {
+        -webkit-transition: 0.6s ease-in-out top;
+        -moz-transition: 0.6s ease-in-out top;
+        -ms-transition: 0.6s ease-in-out top;
+        -o-transition: 0.6s ease-in-out top;
+        transition: 0.6s ease-in-out top;
+    }
+
+    .carousel.vertical .active {
+        top: 0;
+    }
+
+    .carousel.vertical .next {
+        top: 400px;
+    }
+
+    .carousel.vertical .prev {
+        top: -400px;
+    }
+
+    .carousel.vertical .next.left,
+    .carousel.vertical .prev.right {
+        top: 0;
+    }
+
+    .carousel.vertical .active.left {
+        top: -400px;
+    }
+
+    .carousel.vertical .active.right {
+        top: 400px;
+    }
+
+    .carousel.vertical .item {
+        
+    }
+}
+
+.sp-tweet{
+    i{
+        display: block;
+        font-size: 40px;
+        width: 100%;
+        clear: both;
+    }
+}
+
+// =========== team-detail  ============
+.consilium-team-detail{
+    .field-label{
+        color: $color_main;
+        font-weight: normal;
+        font-family: 'open_sansbold';
+    }
+    .user-social{
+        .field-item{
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 20px;
+            a:not(.btn){
+                color: $color_main;
+                &:hover{
+                    color: $color_link;
+                }
+            }
+        }
+    }
+}
+// =========== end team-detail  ============
+
+// =========== portfolio-detail  ============
+.consilium-portfolio-detail{
+    .field-label{
+        color: $color_main;
+        font-weight: normal;
+        font-family: 'open_sansbold';
+    }
+}
+// =========== end portfolio-detail  ============
+
+.region-sidebar-first, .region-sidebar-second{
+   #block-user-login{
+       .form-text{
+           width: 100%;
+       }
+   } 
+}
+
+// =========== gallery page  ============
+.gallery-filters {
+    margin-bottom: 20px;
+    a{
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        background: none repeat scroll 0 0 #F5F5F5;
+        border-color: -moz-use-text-color #ECECEC #ECECEC -moz-use-text-color;
+        border-image: none;
+        border-radius: 4px !important;
+        border-right: 1px solid #ECECEC;
+        border-style: none solid solid none;
+        border-width: 0 1px 1px 0;
+        color: #888888;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'open_sansregular','Open Sans',sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        line-height: 25px;
+        margin-right: 10px;
+        padding: 0 10px;
+        text-decoration: none;
+        text-transform: capitalize;
+        &.active{
+            background: $color_link;
+            color: #fff;
+        }
+        &:hover{
+            background: $color_main;
+            color: #fff;
+        }
+    }
+    
+}
+// =========== end gallery page  ============
