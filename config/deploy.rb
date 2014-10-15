@@ -9,7 +9,7 @@ set :branch, "master"
 server "192.168.1.160", :app, :web, :db 
 #role :app, "192.168.1.160"
 
-set :app_path, "/var/www/drupal7"
+set :app_path, "/var/www/drupal7/current"
 set :shared_children, ['sites/default/files']
 set :shared_files, ['sites/default/settings.php']
 set :deploy_to, "/var/www/drupal7"
